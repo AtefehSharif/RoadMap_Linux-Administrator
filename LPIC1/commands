@@ -1,0 +1,7 @@
+# remove repeated empty lines 
+cat -s filename
+# botton to top display file
+tac filename
+#copy with permission and ownership and timestamps
+cp -p filename filename-copy
+  
