@@ -4,4 +4,4 @@ cat -s filename
 tac filename
 #copy with permission and ownership and timestamps
 cp -p filename filename-copy
-  
+#find 
