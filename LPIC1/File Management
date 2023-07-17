@@ -110,6 +110,113 @@
 # lists files and directories recursively, showing the contents of subdirectories
    ls -R
 --------------------------------------------
+                     chown 
+to change owner's files and directories
+--------------------------------------------
+# to show owner group and user
+ls -l
+
+# change user and group files
+chown username:group file1 file2 
+
+# change just username
+chown username file
+
+# just change username with UserID
+chown UserID file
+
+# just change group 
+chown :group file
+
+# change owner files like other file
+chown --reference=ReferenceFILE FILE
+
+# change owner recursively
+chown -R username:group Directory
+
+# change owner of link file
+chown -h username:group linkFile
+
+# show owner files
+chown -v file1 file2
+
+--------------------------------------------
+                     mkdir
+create directory
+--------------------------------------------
+# create directory recursively
+mkdir -p /home/dir1/dir2
+
+# create directory with specify permission like chmod
+mkdir -m a=rwx [directories]
+mkdir –m777 [directories]
+
+--------------------------------------------
+                     mv
+move directory or file
+--------------------------------------------
+# change file name or directory name 
+mv file1.txt file2.txt
+
+# move with ask question
+mv -i file1.txt file2.txt
+
+#force move
+mv -f file1 file1
+
+#move file but if exist prevent to do
+mv -n file1 file2
+
+#move file but create a backup file
+move -b file1 file2
+
+
+--------------------------------------------
+                     du
+check size on disk
+--------------------------------------------
+#show size of directories and files but **summery and **human readable and **time modified
+ du -sht ./*
+
+#show size of all files and directories recursively
+ du -aht .
+
+#show size of directories
+du -cht .
+
+#show size on disk base on Mega kilo gig
+ du -BM or -BK or -BG
+
+--------------------------------------------
+                     pwd
+show current location
+--------------------------------------------
+it has a variable in OS level
+echo $PWD
+
+
+--------------------------------------------
+                     touch
+create file or modify access and modify and create time
+--------------------------------------------
+#create file1
+ touch file1
+
+#change "file access and modification time"
+ touch -a file1
+#change "only modification time"
+touch -m
+
+--------------------------------------------
+                     df 
+show disk space utilization and inode usage
+--------------------------------------------
+# -h human readable , a all partitions , T print file system
+ df -haT
+# check usage inodes
+df -hi
+
+--------------------------------------------
                      echo
 --------------------------------------------
 
