@@ -217,6 +217,51 @@ show disk space utilization and inode usage
 df -hi
 
 --------------------------------------------
+                     rm
+rm file and directory
+--------------------------------------------
+# remove file rescursively
+rm -rfv /home
+
+--------------------------------------------
+                     chmod
+change permission 
+--------------------------------------------
++,-r OR 4 stands for "read",
++,-w OR 2 stands for "write",
++,-x OR 1 stands for "execute"
+0 stands for "no permission."
+and mix of them like 7 full permission
+
+user group other
+000   000   000
+
+chmod -Rv 755 file1
+:: user: full access
+:: group: read and excute
+:: other: read and excute
+
+--------------------------------------------
+                     stat
+information about file 
+--------------------------------------------
+stat file1
+
+--------------------------------------------
+                     grep
+filter file 
+--------------------------------------------
+grep "search word" file1
+OR
+cat file1 | grep "search word"
+
+#-r recursively, n line number in file, w find the exact match , -e expression like *2023*, -l just show list of files
+ grep -rnwl . -e "hello*" -e "boy{s,1}"
+
+# -i insensative , -c count of matches
+grep -ic -A10 -B20 hello file1
+
+--------------------------------------------
                      echo
 --------------------------------------------
 
