@@ -262,6 +262,14 @@ cat file1 | grep "search word"
 grep -ic -A10 -B20 hello file1
 
 --------------------------------------------
+                     tail
+tail file 
+--------------------------------------------
+#show the end of file online , used for log monitor
+tail -f file
+# stop tail and start run again
+
+--------------------------------------------
                      echo
 --------------------------------------------
 
